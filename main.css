@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+}
+
+header{
+    background-color: teal /*#35424a*/;
+    padding-top: 15px;
+    min-height: 45px;
+}
+
+header a {
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: #ffffff;
+}
+
+header ul {
+   margin: 0px;
+   padding: 0px;
+}
+
+header li {
+    list-style: none;
+    display: inline;
+    padding: 0 20px 0 20px;
+   
+}
+
+header #logo{
+ float: left;
+ margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight{
+    color:#ffffff;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: indianred;
+    font-weight: bold;
+}
+
+#showcase{
+    background: url("img/Benjamin.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 92vh; 
+    text-align: center;
+}
+ 
+#showcase h1{
+    margin-top: 100px;
+    color: teal;
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 30px;
+    color: teal;
+}
+
+button{
+padding: 20px;
+color:#ffffff;
+background-color: teal;
+border-radius: 10px;
+}
+
+@media all and (max-width:520px) {
+    header {
+       text-align: center;
+    }
+    #showcase{
+        text-align: center;
+    }
+    #showcase h1{
+        margin-top: 50px;
+        font-size: 60px;
+    }
+    #showcase p{
+        font-size: 30px;
+    }
+}
