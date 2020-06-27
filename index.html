@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="main.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
     <title>Business Hub</title>
 </head>
 <body>
@@ -12,9 +13,21 @@
         <h1 id="logo" class="highlight">Business Hub</h1>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="https://twitter.com">Contact</a></li>
+            <li><a href="business.html">Add Business</a></li>
+
+            <li class="dropdown">
+                <button class="dropbtn">CATEGORIES
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Health</a>
+                  <a href="#">Hospitality</a>
+                  <a href="#">Finance</a>
+                  <a href="#">Construction</a>
+                </div>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         </nav> 
     </div>
@@ -35,19 +48,19 @@
                 <p class="design"><b>Health</b></p>
                 <img src="img/sketch.svg" alt="">   
                 <p class="mover">Lorem ipsum dolor, sit amet consectetur adipisicing elit Numquam, tenetur.</p>
-                <button>Read More</button>
+                <button>Search Now</button>
             </div>
             <div class="card2">
                 <p class="design"><b>Construction</b></p>
                 <img src="img/worker.svg">
                 <p class="mover">Lorem ipsum dolor, sit amet consectetur adipisicing elit Numquam, tenetur.</p>
-                <button>Read More</button>
+                <button>Search Now</button>
             </div>
             <div class="card3">
                 <p class="design"><b>Hospitality</b></p>
                 <img src="img/temple.svg" alt="">
                 <p class="mover">Lorem ipsum dolor, sit amet consectetur adipisicing elit Numquam, tenetur.</p>
-                <button>Read More</button>
+                <button>Search Now</button>
             </div>
         </div>
     </section>
