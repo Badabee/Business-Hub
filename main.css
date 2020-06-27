@@ -75,6 +75,13 @@ header a:hover{
     color: teal;
 }
 
+.search{
+    padding: 20px 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
 button{
 padding: 20px;
 color:#ffffff;
