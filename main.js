@@ -1,7 +1,10 @@
-let table = document.querySelector("#data");
+/*let table = document.querySelector("#data");
 let tableau = document.querySelector("tr");
 let button = document.querySelector("#final");
 let input = document.querySelector("input")
+
+
+table.addEventListener("submit", runEvent);
 
 function inputLength() {
 	return input.value.length;
@@ -25,3 +28,21 @@ input.addEventListener("keypress", function(event) {
     createListElement();
     }   
   })
+*/
+
+let tableau = document.getElementById("data");
+let itemList = document.querySelector("tr");
+
+tableau.addEventListener("submit", addItem);
+
+//Add Item
+function addItem(e){
+    e.preventDefault();
+
+    let newItem = document.getElementById("bev").value;
+    let tray = document.createElement("tr");
+
+    tray.appendChild(document.createTextNode(newItem));
+
+    itemList.appendChild(tray);
+}
