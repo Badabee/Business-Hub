@@ -323,7 +323,7 @@ table {
       font-weight: 500;
   }
 
-  .box input[type = "text"],.box input[type = "number"],.box select[name="cars"]{
+  .box input[type = "text"],.box input[type = "number"],.box select[name="category"]{
       border: 0;
       background: none;
       display: block;
@@ -343,7 +343,7 @@ table {
         border-color: #2ecc71;
     }
 
-    .box select[name="cars"]{
+    .box select[name="category"]{
         color: white;
         background: black;
         width: 215px;

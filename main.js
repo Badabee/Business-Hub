@@ -1,48 +1,78 @@
-/*let table = document.querySelector("#data");
-let tableau = document.querySelector("tr");
-let button = document.querySelector("#final");
-let input = document.querySelector("input")
+// let table = document.querySelector("#data");
+// let tableau = document.querySelector("tr");
+// let button = document.querySelector("#final");
+// let input = document.querySelector("input")
 
 
-table.addEventListener("submit", runEvent);
+// table.addEventListener("submit", runEvent);
 
-function inputLength() {
-	return input.value.length;
+// function inputLength() {
+// 	return input.value.length;
+// }
+
+// function createListElement() {
+//   let text = document.createElement("td");
+//   text.appendChild(document.createTextNode(input.value));
+// 	tableau.appendChild(text);
+// 	input.value = "";
+// }
+
+// function addListAfterClick() {
+// 	if (inputLength() > 0) {
+// 		createListElement();
+// 	}
+// }
+
+// input.addEventListener("keypress", function(event) {
+//     if(inputLength() > 0 && event.which === 13) {
+//     createListElement();
+//     }   
+//   })
+
+// let tableau = document.getElementsByClassName("box");
+// let itemList = document.querySelector("tr");
+
+// tableau.addEventListener("su", addItem);
+
+// //Add Item
+// function addItem(e){
+
+//     e.preventDefault();
+
+//     let newItem = document.getElementById("bev").value;
+//     let tray = document.createElement("tr");
+
+//     tray.appendChild(document.createTextNode(newItem));
+
+//     itemList.appendChild(tray);
+// }
+
+function createCompany(name, category, location, contact) {
+  return `
+    <tr>
+      <td>${name}</td>
+      <td>${category}</td>
+      <td>${location}</td>
+      <td>${contact}</td>
+    </tr>
+  `;
 }
 
-function createListElement() {
-  let text = document.createElement("td");
-  text.appendChild(document.createTextNode(input.value));
-	tableau.appendChild(text);
-	input.value = "";
+function appendCompany(company) {
+  const companiesTable = document.getElementById("data");
+  companiesTable.children[1].innerHTML += company;
 }
 
-function addListAfterClick() {
-	if (inputLength() > 0) {
-		createListElement();
-	}
-}
+const addCompanyForm = document.forms["add-company"];
 
-input.addEventListener("keypress", function(event) {
-    if(inputLength() > 0 && event.which === 13) {
-    createListElement();
-    }   
-  })
-*/
+addCompanyForm.addEventListener("submit", e=> {
+  e.preventDefault();
 
-let tableau = document.getElementById("data");
-let itemList = document.querySelector("tr");
+  const {name, category, location, contact} = addCompanyForm.elements;
 
-tableau.addEventListener("submit", addItem);
-
-//Add Item
-function addItem(e){
-    e.preventDefault();
-
-    let newItem = document.getElementById("bev").value;
-    let tray = document.createElement("tr");
-
-    tray.appendChild(document.createTextNode(newItem));
-
-    itemList.appendChild(tray);
-}
+  if(name.value && category.value && location.value && contact.value) {
+    const company = createCompany(name.value, category.value, location.value, contact.value);
+    appendCompany(company);
+    addCompanyForm.reset();
+  }
+})

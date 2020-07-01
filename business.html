@@ -34,18 +34,18 @@
 </header>
 
 <section class="gothic">
-  <form class="box" method="POST">
+  <form name="add-company" class="box add-company-form" method="POST">
     <h1>Add Business</h1>
-    <input type="text" name="" placeholder="Company name" id="bev">
-    <select id="bev" name="cars" placeholder="Category">
+    <input type="text" name="name" placeholder="Company name" class="bev" required>
+    <select class="bev" name="category" placeholder="Category" required>
       <option value="volvo">Category</option>
-      <option value="saab">Finance</option>
-      <option value="fiat">Construction</option>
-      <option value="audi">Health</option>
-      <option value="audi">Hospitality</option>
+      <option value="finance">Finance</option>
+      <option value="construction">Construction</option>
+      <option value="health">Health</option>
+      <option value="hospitality">Hospitality</option>
     </select>
-    <input type="text" name="" placeholder="Location" id="bev">
-    <input type="number" name="" placeholder="Contact" id="bev">
+    <input type="text" name="location" placeholder="Location" class="bev" required>
+    <input type="number" name="contact" placeholder="Contact" class="bev" required>
     <input type="submit" name="" value="Submit" id="final">
   </form>
 
@@ -56,12 +56,17 @@
 <h2 class="biz">List of Businesses Available</h2>
 
 <table id="data">
+  <thead>
+
     <tr>
       <th>Company</th>
       <th>Category</th>
       <th>Location</th>
       <th>Contact</th>
     </tr>
+  </thead>
+  <tbody>
+    
     <tr>
       <td>Unilever</td>
       <td>FMCG</td>
@@ -170,6 +175,7 @@
         <td>Jibowu, Yaba</td>
         <td>01-36748939</td>
       </tr>
+    </tbody>
   </table>
 
 </section>
@@ -210,6 +216,8 @@
         </div>
     </div>
   </footer>
+
+  <script src="./main.js"></script>
 
 </body>
 </html>
